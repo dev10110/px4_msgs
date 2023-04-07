@@ -54,7 +54,7 @@ set(PX4_MSGS
   "msg/VehicleTrajectoryWaypoint.msg"
 )
 
-message(${PX4_MSGS})
+# message(${PX4_MSGS})
 
 # Generate introspection typesupport for C and C++ and IDL files
 rosidl_generate_interfaces(${PROJECT_NAME} ${PX4_MSGS}
