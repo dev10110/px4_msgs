@@ -17,12 +17,44 @@ find_package(rosidl_default_generators REQUIRED)
 # ##############################################################################
 
 # get all msg files
-set(MSGS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/msg")
-file(GLOB PX4_MSGS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${MSGS_DIR}/*.msg")
+# set(MSGS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/msg")
+# file(GLOB PX4_MSGS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${MSGS_DIR}/*.msg")
+# 
+# file(GLOB ROS_MSG_DIR_LIST "${MSGS_DIR}/*.msg")
+# 
+# set(ROS_MSG_DIR_LIST "${ROS_MSG_DIR_LIST}" CACHE INTERNAL "ROS_MSG_DIR_LIST")
 
-file(GLOB ROS_MSG_DIR_LIST "${MSGS_DIR}/*.msg")
+set(PX4_MSGS 
+  "msg/DebugVect.msg"
+  "msg/ActionRequest.msg"
+  "msg/CollisionConstraints.msg"
+  "msg/FailsafeFlags.msg"
+  "msg/SensorCombined.msg"
+  "msg/TimesyncStatus.msg"
+  "msg/VehicleAngularVelocity.msg"
+  "msg/VehicleAttitude.msg"
+  "msg/VehicleControlMode.msg"
+  "msg/VehicleGlobalPosition.msg"
+  "msg/SensorGps.msg"
+  "msg/VehicleLocalPosition.msg"
+  "msg/VehicleOdometry.msg"
+  "msg/VehicleStatus.msg"
+  "msg/OffboardControlMode.msg"
+  "msg/OnboardComputerStatus.msg"
+  "msg/ObstacleDistance.msg"
+  "msg/SensorOpticalFlow.msg"
+  "msg/TelemetryStatus.msg"
+  "msg/TrajectorySetpoint.msg"
+  "msg/VehicleAttitudeSetpoint.msg"
+  "msg/VehicleRatesSetpoint.msg"
+  "msg/VehicleCommand.msg"
+  "msg/TrajectoryWaypoint.msg"
+  "msg/TrajectoryBezier.msg"
+  "msg/VehicleTrajectoryBezier.msg"
+  "msg/VehicleTrajectoryWaypoint.msg"
+)
 
-set(ROS_MSG_DIR_LIST "${ROS_MSG_DIR_LIST}" CACHE INTERNAL "ROS_MSG_DIR_LIST")
+message(${PX4_MSGS})
 
 # Generate introspection typesupport for C and C++ and IDL files
 rosidl_generate_interfaces(${PROJECT_NAME} ${PX4_MSGS}
