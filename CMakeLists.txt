@@ -52,6 +52,8 @@ set(PX4_MSGS
   "msg/TrajectoryBezier.msg"
   "msg/VehicleTrajectoryBezier.msg"
   "msg/VehicleTrajectoryWaypoint.msg"
+  "msg/CommanderStatus.msg"
+  "msg/CommanderSetState.msg"
 )
 
 # message(${PX4_MSGS})
