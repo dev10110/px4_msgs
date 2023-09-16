@@ -7,6 +7,9 @@ list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_compile_options(-Wall -Wextra)
 endif()
+if( NOT CMAKE_BUILD_TYPE)
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
@@ -25,38 +28,38 @@ find_package(rosidl_default_generators REQUIRED)
 # set(ROS_MSG_DIR_LIST "${ROS_MSG_DIR_LIST}" CACHE INTERNAL "ROS_MSG_DIR_LIST")
 
 set(PX4_MSGS 
-  "msg/ActionRequest.msg"
+  # "msg/ActionRequest.msg"
   "msg/BatteryStatus.msg"
-  "msg/CollisionConstraints.msg"
+  # "msg/CollisionConstraints.msg"
   "msg/CommanderSetState.msg"
   "msg/CommanderStatus.msg"
-  "msg/DebugVect.msg"
-  "msg/FailsafeFlags.msg"
-  "msg/ObstacleDistance.msg"
-  "msg/OffboardControlMode.msg"
-  "msg/OnboardComputerStatus.msg"
+  # "msg/DebugVect.msg"
+  # "msg/FailsafeFlags.msg"
+  # "msg/ObstacleDistance.msg"
+  # "msg/OffboardControlMode.msg"
+  # "msg/OnboardComputerStatus.msg"
   "msg/ParameterReq.msg"
   "msg/ParameterRes.msg"
   "msg/SensorCombined.msg"
   "msg/SensorGps.msg"
-  "msg/SensorOpticalFlow.msg"
-  "msg/TelemetryStatus.msg"
+  # "msg/SensorOpticalFlow.msg"
+  # "msg/TelemetryStatus.msg"
   "msg/TimesyncStatus.msg"
-  "msg/TrajectoryBezier.msg"
+  # "msg/TrajectoryBezier.msg"
   "msg/TrajectorySetpoint.msg"
-  "msg/TrajectoryWaypoint.msg"
-  "msg/VehicleAngularVelocity.msg"
-  "msg/VehicleAttitude.msg"
-  "msg/VehicleAttitudeSetpoint.msg"
+  # "msg/TrajectoryWaypoint.msg"
+  # "msg/VehicleAngularVelocity.msg"
+  # "msg/VehicleAttitude.msg"
+  # "msg/VehicleAttitudeSetpoint.msg"
   "msg/VehicleCommand.msg"
   "msg/VehicleControlMode.msg"
-  "msg/VehicleGlobalPosition.msg"
+  # "msg/VehicleGlobalPosition.msg"
   "msg/VehicleLocalPosition.msg"
   "msg/VehicleOdometry.msg"
-  "msg/VehicleRatesSetpoint.msg"
+  # "msg/VehicleRatesSetpoint.msg"
   "msg/VehicleStatus.msg"
-  "msg/VehicleTrajectoryBezier.msg"
-  "msg/VehicleTrajectoryWaypoint.msg"
+  # "msg/VehicleTrajectoryBezier.msg"
+  # "msg/VehicleTrajectoryWaypoint.msg"
 )
 
 # message(${PX4_MSGS})
