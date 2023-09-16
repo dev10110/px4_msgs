@@ -29,7 +29,8 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(PX4_MSGS 
   # "msg/ActionRequest.msg"
-  "msg/BatteryStatus.msg"
+  # "msg/BatteryStatus.msg"
+  "msg/SimpleBatteryStatus.msg"
   # "msg/CollisionConstraints.msg"
   "msg/CommanderSetState.msg"
   "msg/CommanderStatus.msg"
